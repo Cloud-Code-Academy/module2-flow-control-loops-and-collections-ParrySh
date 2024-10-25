@@ -166,8 +166,11 @@ public with sharing class FlowControlLoopsCollections {
         else if (score >=60) {
             return 'D';
         } 
-        else return 'F';
+        else {
+            return 'F';
+        }
     }
+    
 
 
     /**
@@ -409,7 +412,7 @@ public with sharing class FlowControlLoopsCollections {
         employeeSalaries.put('Sam Brown', 55000);
         employeeSalaries.put('Alice Johnson', 65000);
         // Get the salary of the employee
-        Integer Salary = employeeSalaries.get(employeeName);
+        Integer salary = employeeSalaries.get(employeeName);
         // Return the salary of the employee, or null if the employee is not found in the Map
         return salary; // Replace null with the variable you used to store the result
     }
@@ -438,18 +441,18 @@ public with sharing class FlowControlLoopsCollections {
         employeeSalaries.put('Sam Brown', 55000);
         employeeSalaries.put('Alice Johnson', 65000);
         // Initialize a list to store the names of high paid employees
-        List<String> HighPaidEmployees = new List<String>();
+        List<String> highPaidEmployees = new List<String>();
         // Iterate over the Map using a for loop
         for (String employeeName  : employeeSalaries.keySet()) {
             Integer salary = employeeSalaries.get(employeeName);
             if (salary > 55000) {
-                HighPaidEmployees.add(employeeName);
+                highPaidEmployees.add(employeeName);
             }
         }
             // Check if the salary of the employee is more than 55000
                 // Add the employee to the list of high paid employees
 
         // Return the list of high paid employees
-        return HighPaidEmployees; //
+        return highPaidEmployees; //
     }
 }
